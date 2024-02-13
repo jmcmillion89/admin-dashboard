@@ -190,7 +190,10 @@ img[src="icons/death-star-svgrepo-com.svg"] {
 
 .announcements-container, 
 .trending-container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 1rem;
     background-color: #fff;
     box-shadow: 0px 0px 10px #84888d;
@@ -202,6 +205,14 @@ img[src="icons/death-star-svgrepo-com.svg"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 100%;
+}
+
+.announcements-container div {
+    border-bottom: 2px solid #cbd5e1;
+}
+
+.announcements-container div:last-child {
+    border-bottom: none;
 }
