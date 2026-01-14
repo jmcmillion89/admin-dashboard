@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --bgcolor1: white;
+    --bgcolor2: rgb(22, 119, 158);
+    --bgcolor3: rgb(133, 160, 170);
+    --shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+}
+
+.layout {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-template-rows: 2fr 10fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar content";
+}
+
+
+.header {
+    background-color: var(--bgcolor1);
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-area: header
+}
+
+.search {
+    grid-area: ;
+}
+
+.profile {
+    grid-area: ;
+}
+
+.greeting {
+    grid-area: ;
+}
+
+.menu {
+    grid-area: ;
+}
+
+.sidebar {
+    background-color: var(--bgcolor2);
+    display: flex;
+    grid-area: sidebar;
+}
+
+.heading {
+
+}
+
+.nav {
+    
+}
+
+.nav ul {
+
+}
+
+.nav ul li {
+
+}
+
+.content {
+    background-color: var(--bgcolor3);
+    display: grid;
+    grid-area: content
+}
+
+.card {
+    grid-area: ;
+    display: flex;
+}
+
+.card h2 {
+
+}
+
+.card p {
+
+}
+
+.card-btns {
+
+}
+
+.card-btns img {
+    width: 2rem;
+}
+
+.announcements {
+
+}
+
+.trending {
+
+}
