@@ -6,9 +6,12 @@
 }
 
 :root {
-    --bgcolor1: white;
-    --bgcolor2: rgb(22, 119, 158);
-    --bgcolor3: rgb(133, 160, 170);
+    --bg-color-1: #EAE0CF;
+    --bg-color-2: #213448;
+    --bg-color-3: #547792;
+    --light-text: white;
+    --dark-text: black;
+    --border-accent: #94B4C1;
     --shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
 }
 
@@ -24,10 +27,11 @@
 
 
 .header {
-    background-color: var(--bgcolor1);
+    background-color: var(--bg-color-1);
     box-shadow: var(--shadow);
     display: grid;
-    grid-area: header
+    grid-area: header;
+    position: relative;
 }
 
 .search {
@@ -47,7 +51,8 @@
 }
 
 .sidebar {
-    background-color: var(--bgcolor2);
+    color: var(--light-text);
+    background-color: var(--bg-color-2);
     display: flex;
     grid-area: sidebar;
 }
@@ -69,7 +74,7 @@
 }
 
 .content {
-    background-color: var(--bgcolor3);
+    background-color: var(--bg-color-3);
     display: grid;
     grid-area: content
 }
