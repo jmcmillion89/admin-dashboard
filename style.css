@@ -9,17 +9,21 @@
     --bg-color-1: #EAE0CF;
     --bg-color-2: #213448;
     --bg-color-3: #547792;
-    --light-text: white;
-    --dark-text: black;
+    --light-text: #EAE0CF;
+    --dark-text: #000;
     --border-accent: #94B4C1;
     --shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
 }
 
 .layout {
     height: 100vh;
     display: grid;
     grid-template-columns: 2fr 10fr;
-    grid-template-rows: 2fr 10fr;
+    grid-template-rows: 3fr 10fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar content";
@@ -32,33 +36,88 @@
     display: grid;
     grid-area: header;
     position: relative;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "search profile"
+    "greeting menu";
 }
 
 .search {
-    grid-area: ;
+    grid-area: search;
+}
+
+.search input {
+    color: var(--light-text);
+    background-color: var(--bg-color-3);
+    border: none;
+    border-radius: 30px;
+}
+
+.search svg {
+    width: 1em;
 }
 
 .profile {
-    grid-area: ;
+    grid-area: profile;
+}
+
+.profile img {
+    width: 1.5em;
+}
+
+.profile svg {
+    width: 1em;
 }
 
 .greeting {
-    grid-area: ;
+    grid-area: greeting;
+    display: flex;
+    align-items: center;
+}
+
+.greeting img {
+    width: 3em;
 }
 
 .menu {
-    grid-area: ;
+    grid-area: menu;
+}
+
+.menu button {
+    border: none;
+    border-radius: 30px;
+    width: 5rem;
+    height: 2rem;
+    color: var(--light-text);
+    background-color: var(--bg-color-2);
 }
 
 .sidebar {
+    position: relative;
     color: var(--light-text);
     background-color: var(--bg-color-2);
     display: flex;
     grid-area: sidebar;
+    flex-direction: column;
+    padding: 1rem;
 }
 
 .heading {
+    display: flex;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 
+}
+
+.heading svg {
+    margin-right: .7em;
+}
+
+.sidebar .heading svg, 
+.nav ul li svg {
+    width: 1em;
+    fill: var(--light-text);
 }
 
 .nav {
@@ -70,10 +129,36 @@
 }
 
 .nav ul li {
+    display: flex;
+    list-style: none;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    padding-left: .5rem;
+    align-self: center;
+}
 
+.nav ul li svg {
+    margin-right: 1em;
+}
+
+.nav ul li:nth-child(6) {
+    margin-bottom: 2rem;
+}
+
+.credit {
+    font-size: .8em;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 1rem;
+}
+
+.credit a {
+    color: var(--light-text);
+    text-decoration: none;
 }
 
 .content {
+    color: var(--dark-text);
     background-color: var(--bg-color-3);
     display: grid;
     grid-area: content
@@ -96,7 +181,7 @@
 
 }
 
-.card-btns img {
+.card-btns svg {
     width: 2rem;
 }
 
