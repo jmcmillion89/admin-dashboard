@@ -222,7 +222,8 @@ html {
     grid-area: 1 / 2 / 2 / 3;
 }
 
-.announcements-wrapper {
+.announcements-wrapper, 
+.trending-wrapper {
     box-shadow: var(--shadow);
     background-color: var(--bg-color-1);
     border-radius: 20px;
@@ -242,4 +243,20 @@ html {
     margin: 2rem;
     grid-area: 2 / 2 / 3 / 3;
 
+}
+
+.trending-profile img {
+    width: 3rem;
+    margin-right: 1rem;
+}
+
+.trending-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+}
+
+.trending-profile {
+    display: flex;
+    align-content: center;
 }
